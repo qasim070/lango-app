@@ -1,14 +1,14 @@
 import { StyleSheet } from 'react-native';
+
+import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={ { fontSize: 25 ,fontFamily: 'Poppins-Medium' , } }>COMING SOON</Text>
+      <Text style={styles.title}>Tab Two</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-
-      <Text style={{fontFamily: 'Poppins' }}>Order Food Feature is Coming Soon (Stay Tuned)</Text>
-      {/* <EditScreenInfo path="app/(tabs)/two.tsx" /> */}
+      <EditScreenInfo path="app/(tabs)/two.tsx" />
     </View>
   );
 }
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
+    fontWeight: 'bold',
   },
   separator: {
     marginVertical: 30,
